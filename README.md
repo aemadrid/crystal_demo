@@ -1,6 +1,6 @@
 # crystal_demo
 
-TODO: Write a description here
+Small http json server demo in Crystal
 
 ## Installation
 
