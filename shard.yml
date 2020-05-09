@@ -1,0 +1,13 @@
+name: crystal_demo
+version: 0.1.0
+
+authors:
+  - Adrian Esteban Madrid <aemadrid@gmail.com>
+
+targets:
+  crystal_demo:
+    main: src/crystal_demo.cr
+
+crystal: 0.32.1
+
+license: MIT
