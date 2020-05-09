@@ -1,6 +1,6 @@
 services:
   web:
-    scale: 1-10
+    scale: 2-10
     rollout:
       increment: 5
       interval: 5
