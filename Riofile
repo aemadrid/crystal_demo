@@ -1,0 +1,23 @@
+services:
+  web:
+    scale: 1-10
+    rollout:
+      increment: 5
+      interval: 5
+      pause: false
+    concurrency: 10
+    build:
+      repo: https://github.com/aemadrid/crystal_demo
+      branch: master
+      dockerfile: Dockerfile
+      imageName: aemadrid/crystal_demo:latest
+    ports:
+      - 80:8080/http,web
+    env:
+      - POD_NAME=$(self/name)
+      - NAMESPACE=$(self/namespace)
+      - LABELS=$(self/labels)
+      - NODE_NAME=$(self/node)
+      - HOST_IP=$(self/hostIp)
+      - NODE_IP=$(self/nodeIp)
+      - POD_IP=$(self/ip)
