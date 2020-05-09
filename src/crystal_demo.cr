@@ -9,7 +9,7 @@ Signal::TERM.trap { puts "Caught kill..."; exit }
 #   HTTP::CompressHandler.new,
 # ]
 content_type = "application/json"
-json = %({"version":1,"status": "ok","message": "Hello world!","language":"cr"})
+json = %({"version":2,"status": "ok","message": "Hello world!","language":"cr"})
 
 # server = HTTP::Server.new(mods) do |context|
 server = HTTP::Server.new do |context|
